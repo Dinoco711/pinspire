@@ -13,8 +13,8 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #fafafa;
-            color: #333;
+            background-color: #f8f6f3;
+            color: #5d4e37;
             line-height: 1.6;
         }
 
@@ -37,7 +37,7 @@
         .logo {
             font-size: 28px;
             font-weight: 700;
-            color: #e60023;
+            color: #d2691e;
             text-decoration: none;
             letter-spacing: -0.5px;
         }
@@ -62,7 +62,7 @@
 
         .search-input:focus {
             background: #fff;
-            box-shadow: 0 0 0 3px rgba(230, 0, 35, 0.1);
+            box-shadow: 0 0 0 3px rgba(210, 105, 30, 0.1);
         }
 
         .nav-items {
@@ -84,12 +84,12 @@
         }
 
         .nav-btn.primary {
-            background: #e60023;
+            background: #d2691e;
             color: white;
         }
 
         .nav-btn.primary:hover {
-            background: #d50720;
+            background: #b8621a;
         }
 
         .nav-btn.secondary {
@@ -98,7 +98,7 @@
         }
 
         .nav-btn.secondary:hover {
-            background: #f1f1f1;
+            background: #f0ede8;
         }
 
         /* Main Content */
@@ -113,30 +113,29 @@
         /* Masonry Grid */
         .masonry-grid {
             columns: 5;
-            column-gap: 20px;
+            column-gap: 8px;
             margin-top: 20px;
         }
 
         .pin-card {
             break-inside: avoid;
-            margin-bottom: 20px;
-            background: white;
-            border-radius: 16px;
+            margin-bottom: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             cursor: pointer;
         }
 
         .pin-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 25px rgba(93, 78, 55, 0.15);
         }
 
         .pin-image {
             width: 100%;
             height: auto;
             display: block;
+            border-radius: 12px;
         }
 
         .pin-content {
@@ -222,7 +221,7 @@
         .modal-title {
             font-size: 24px;
             font-weight: 700;
-            color: #333;
+            color: #5d4e37;
         }
 
         .close {
@@ -240,7 +239,7 @@
         }
 
         .close:hover {
-            background: #e0e0e0;
+            background: #f0ede8;
         }
 
         .modal-body {
@@ -253,13 +252,40 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #f8f8f8;
+            background: #f8f6f3;
+            position: relative;
         }
 
         .modal-image {
             max-width: 100%;
             max-height: 60vh;
             object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .image-overlay {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(93, 78, 55, 0.15);
+        }
+
+        .overlay-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #5d4e37;
+            margin-bottom: 8px;
+        }
+
+        .overlay-description {
+            font-size: 14px;
+            color: #8b7355;
+            line-height: 1.4;
         }
 
         .modal-info {
@@ -271,7 +297,7 @@
 
         .modal-description {
             font-size: 16px;
-            color: #333;
+            color: #5d4e37;
             line-height: 1.6;
             margin-bottom: 20px;
         }
@@ -293,13 +319,13 @@
         .modal-user-info h4 {
             font-size: 16px;
             font-weight: 600;
-            color: #333;
+            color: #5d4e37;
             margin-bottom: 4px;
         }
 
         .modal-user-info p {
             font-size: 14px;
-            color: #767676;
+            color: #8b7355;
         }
 
         .action-buttons {
@@ -319,33 +345,35 @@
         }
 
         .action-btn.save {
-            background: #e60023;
+            background: #d2691e;
             color: white;
         }
 
         .action-btn.save:hover {
-            background: #d50720;
+            background: #b8621a;
         }
 
         .action-btn.share {
-            background: #f1f1f1;
-            color: #333;
+            background: #f0ede8;
+            color: #5d4e37;
         }
 
         .action-btn.share:hover {
-            background: #e0e0e0;
+            background: #e6ddd4;
         }
 
         /* Responsive */
         @media (max-width: 1200px) {
             .masonry-grid {
                 columns: 4;
+                column-gap: 6px;
             }
         }
 
         @media (max-width: 900px) {
             .masonry-grid {
                 columns: 3;
+                column-gap: 5px;
             }
             
             .modal-body {
@@ -360,6 +388,7 @@
         @media (max-width: 600px) {
             .masonry-grid {
                 columns: 2;
+                column-gap: 4px;
             }
             
             .search-container {
@@ -379,6 +408,7 @@
         @media (max-width: 400px) {
             .masonry-grid {
                 columns: 1;
+                column-gap: 0;
             }
         }
 
@@ -393,8 +423,8 @@
         .spinner {
             width: 40px;
             height: 40px;
-            border: 3px solid #f1f1f1;
-            border-top: 3px solid #e60023;
+            border: 3px solid #f0ede8;
+            border-top: 3px solid #d2691e;
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
@@ -439,9 +469,12 @@
             <div class="modal-body">
                 <div class="modal-image-container">
                     <img id="modalImage" class="modal-image" src="" alt="">
+                    <div class="image-overlay">
+                        <h3 class="overlay-title" id="overlayTitle"></h3>
+                        <p class="overlay-description" id="overlayDescription"></p>
+                    </div>
                 </div>
                 <div class="modal-info">
-                    <p class="modal-description" id="modalDescription"></p>
                     <div class="action-buttons">
                         <button class="action-btn save">Save</button>
                         <button class="action-btn share">Share</button>
@@ -463,7 +496,7 @@
         const samplePins = [
             {
                 id: 1,
-                image: 'https://pin.it/6sXlxOOzz',
+                image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=600&fit=crop',
                 title: 'Modern Minimalist Kitchen',
                 description: 'Clean lines and natural materials create the perfect modern kitchen space. This design emphasizes functionality while maintaining aesthetic appeal.',
                 user: {
@@ -601,7 +634,8 @@
         const closeModal = document.getElementById('closeModal');
         const modalTitle = document.getElementById('modalTitle');
         const modalImage = document.getElementById('modalImage');
-        const modalDescription = document.getElementById('modalDescription');
+        const overlayTitle = document.getElementById('overlayTitle');
+        const overlayDescription = document.getElementById('overlayDescription');
         const modalUserAvatar = document.getElementById('modalUserAvatar');
         const modalUserName = document.getElementById('modalUserName');
         const modalUserBio = document.getElementById('modalUserBio');
@@ -631,14 +665,6 @@
             
             pinCard.innerHTML = `
                 <img class="pin-image" src="${pin.image}" alt="${pin.title}" loading="lazy">
-                <div class="pin-content">
-                    <h3 class="pin-title">${pin.title}</h3>
-                    <p class="pin-description">${pin.description.substring(0, 100)}...</p>
-                    <div class="pin-user">
-                        <img class="user-avatar" src="${pin.user.avatar}" alt="${pin.user.name}">
-                        <span class="user-name">${pin.user.name}</span>
-                    </div>
-                </div>
             `;
             
             return pinCard;
@@ -649,7 +675,8 @@
             modalTitle.textContent = pin.title;
             modalImage.src = pin.image;
             modalImage.alt = pin.title;
-            modalDescription.textContent = pin.description;
+            overlayTitle.textContent = pin.title;
+            overlayDescription.textContent = pin.description;
             modalUserAvatar.src = pin.user.avatar;
             modalUserAvatar.alt = pin.user.name;
             modalUserName.textContent = pin.user.name;
